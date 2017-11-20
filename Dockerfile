@@ -4,11 +4,14 @@ RUN apk add --update \
     arpack-dev \
     curl \
     curl-dev \
+    dsfmt \
+    dsfmt-dev \
     fftw-dev \
     g++ \
     git \
     gmp-dev \
     lapack-dev \
+    libgit2-dev \
     libunwind-dev \
     libuv-dev \
     llvm-dev \
@@ -18,6 +21,7 @@ RUN apk add --update \
     openblas-dev \
     openspecfun-dev \
     openssl \
+    perl \
     pcre2-dev \
     suitesparse-dev \
     tar \
@@ -28,3 +32,4 @@ COPY julia /root/julia
 COPY Make.user /root/julia/
 
 WORKDIR /root/julia
+RUN make
